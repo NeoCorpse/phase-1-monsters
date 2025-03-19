@@ -1,16 +1,37 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Monstr</title>
-    <!-- <script src='js/index.js'></script> -->
-    <script src='js/demo.js'></script>
-  </head>
-  <body>
-    <h1>Monstr Inc.</h1>
-    <div id='create-monster'></div>
-    <div id='monster-container'></div>
-    <button id="back"><=</button>
-    <button id="forward">=></button>
-  </body>
+	<head>
+		<meta charset="utf-8" />
+		<title>Monstr</title>
+		<script defer src="js/index.js"></script>
+		<!-- <script src='js/demo.js'></script> -->
+	</head>
+	<body>
+		<h1>Monstr Inc.</h1>
+		<div id="create-monster">
+
+			<form action="#">
+				<input type="text" name="name" id="name" placeholder="name..." required />
+				<input type="number" name="age" id="age" placeholder="age..." required />
+				<input type="text" name="description" id="description" placeholder="description..." required />
+				<input type="submit" value="Create" id="submit" />
+			</form>
+
+			<br />
+
+			<form id="update" action="#">
+				<select name="limit" id="limit">
+					<option value="30">30</option>
+					<option value="40">40</option>
+					<option value="50">50</option>
+				</select>
+				<input type="number" name="page" id="page" max="20" min="1" placeholder="page..." value="1" required title="Pick a page number between 1 and 20" />
+				<input type="submit" value="Update" class="updateBtn">
+			</form>
+
+		</div>
+		<div id="monster-container"></div>
+		<button id="back"><=</button>
+		<button id="forward">=></button>
+	</body>
 </html>
